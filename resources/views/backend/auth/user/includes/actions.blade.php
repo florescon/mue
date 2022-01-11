@@ -90,7 +90,7 @@
                         <x-utils.link
                             :href="route('impersonate', $user->id)"
                             class="dropdown-item"
-                            :text="__('Login As ' . $user->name)"
+                            :text="__('Login as this user')"
                             permission="admin.access.user.impersonate" />
                     @endCanBeImpersonated
 

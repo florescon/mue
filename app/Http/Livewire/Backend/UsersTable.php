@@ -70,23 +70,23 @@ class UsersTable extends DataTableComponent
     public function filters(): array
     {
         return [
-            'type' => Filter::make('User Type')
+            'type' => Filter::make(__('User Type'))
                 ->select([
-                    '' => 'Any',
+                    '' => __('Any'),
                     User::TYPE_ADMIN => 'Administrators',
                     User::TYPE_USER => 'Users',
                 ]),
-            'active' => Filter::make('Active')
+            'active' => Filter::make(__('Active'))
                 ->select([
-                    '' => 'Any',
-                    'yes' => 'Yes',
-                    'no' => 'No',
+                    '' => __('Any'),
+                    'yes' => __('Yes'),
+                    'no' => __('No'),
                 ]),
-            'verified' => Filter::make('E-mail Verified')
+            'verified' => Filter::make(__('E-mail Verified'))
                 ->select([
-                    '' => 'Any',
-                    'yes' => 'Yes',
-                    'no' => 'No',
+                    '' => __('Any'),
+                    'yes' => __('Yes'),
+                    'no' => __('No'),
                 ]),
         ];
     }
